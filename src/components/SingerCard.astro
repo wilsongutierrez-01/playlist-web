@@ -1,0 +1,19 @@
+---
+import '@fontsource/play';
+interface Props {
+	singer_name: string;
+	songs: string;
+  singer_img: string;
+}
+
+const { singer_name, songs, singer_img } = Astro.props;
+---
+<article class="w-[232px] h-[262px] bg-[#560C46] rounded-[34px] overflow-hidden">
+  <div class="flex justify-center">
+    <img src=`${singer_img}` alt=`${singer_img} image` class="object-cover h-[168px]"/>
+  </div>
+  <div class="flex flex-col p-4 font-play bg-[#1D1D1D87] h-full">
+    <p class="text-white font-play text-[18px] font-normal">{singer_name}</p>
+    <p class="text-white text-opacity-80">{songs}</p>
+  </div>
+</article>

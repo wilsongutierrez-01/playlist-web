@@ -1,0 +1,20 @@
+---
+import TableSongs from "./TableSongs.astro";
+
+const data = {
+  title: 'Marito Rivera Éxitos',
+  rows: [
+    'Nombre Canción',
+    'Nombre Canción',
+    'Nombre Canción',
+    'Nombre Canción',
+    'Nombre Canción',
+    'Nombre Canción',
+    'Nombre Canción',
+  ]
+};
+---
+
+<div class='w-full'>
+  <TableSongs {...data}/>
+</div>

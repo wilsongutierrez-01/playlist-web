@@ -1,0 +1,22 @@
+---
+import PlayDarkIcon from "./icons/PlayDarkIcon.astro";
+
+interface PlayCardProps {
+  title: string;
+  songs: string;
+  image: string;
+  size: string;
+  mode: string;
+}
+
+const { title, songs, image, size, mode } = Astro.props;
+//[#560C4642]
+---
+<article class=`flex  ${mode === 'light' ? 'bg-[#560C46A3]' : 'bg-[#560C4642]'}  rounded-[30px] ${size === 'large' ? 'w-full h-full p-10 items-center' : 'w-full h-[132px] p-4 gap-2'}`>
+  <div>
+    <p class=`font-play font-normal text-white ${size === 'large' ? 'text-[30px]' : 'text-[16px]'}`>{title}</p>
+    <p class=`font-play font-normal text-[#BC1256] ${size === 'large' ? 'text-[33px]' : 'text-[18px]'}`>{songs}</p>
+      <PlayDarkIcon class=`${size === 'large' ? 'w-[72px]' : 'w-[38px]'}` />
+  </div>
+  <img src={image} alt={title} />
+</article>

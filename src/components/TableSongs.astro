@@ -1,0 +1,30 @@
+---
+import PlayIconLight from "./icons/PlayIconLight.astro";
+import YoutubeIcon from "./icons/YoutubeIcon.astro";
+
+interface TableProps {
+  title: string;
+  rows: string[];
+}
+
+const { title, rows } = Astro.props;
+---
+
+<article>
+  <h2 class="text-[40px] font-extrabold mb-4 text-white">{title}</h2>
+  <table class="w-full border-collapse">
+    
+    <tbody>
+      {rows.map((row: any, index: any) => (
+        <tr class={index % 2 === 0 ? 'bg-gradient-to-r from-custom-dark-blue from-40% to-custom-pink text-white' : 'bg-[#000000] text-white'}>
+          {row.split(',').map((cell: string) => (
+            <td class="flex justify-between p-4 font-play"> 
+              <div class="flex gap-2 items-center"><PlayIconLight /> {cell}</div>  
+              <div><YoutubeIcon/></div>
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</article>
