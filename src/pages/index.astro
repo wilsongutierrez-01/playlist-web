@@ -13,8 +13,10 @@ import PlayCardSection from '../components/PlayCardSection.astro';
 
 <Layout title="Welcome to Astro.">
 	<main>
-    <Header />
-    <section class="flex justify-between items-center">
+    <section class="pl-[5%] pr-[5%]">
+      <Header />
+    </section>
+    <section class="flex justify-between items-center pl-[5%] pr-[5%]">
       <div>
         <p class="text-white font-extrabold text-[40px] max-w-[400px] leading-[72px]">Conoce las <span class="text-[#D71462]">Playlist</span> </p>
         <p class="text-white mt-[20px] font-play text-[21px] font-normal">Encuentra tu mood ideal con playlist ...</p>
@@ -22,14 +24,14 @@ import PlayCardSection from '../components/PlayCardSection.astro';
       <img src="./hero-img.webp" alt="">
     </section>
 
-    <section class="flex justify-center gap-10">
+    <section class="flex justify-center gap-10 pl-[5%] pr-[5%] pl-[5%] pr-[5%]">
       <SingerCard singer_name="Marito Rivera Éxitos" songs="20 canciones" singer_img='./singers/maritorivera.webp'/>
       <SingerCard singer_name="Gaby Tobar" songs="20 canciones" singer_img='./singers/gabytobar.webp'/>
       <SingerCard singer_name="Nahum Molina" songs="20 canciones" singer_img='./singers/nahummolina.webp'/>
       <SingerCard singer_name="Paty Menéndez" songs="20 canciones" singer_img='./singers/patymendez.webp'/>
     </section>
 
-    <section class="flex justify-between mt-48 gap-48">
+    <section class="flex justify-between mt-48 gap-48 pl-[5%] pr-[5%]">
       <TableSection />
       <PlayCardSection />
     </section>
